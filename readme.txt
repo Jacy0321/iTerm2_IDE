@@ -21,5 +21,15 @@
     在.zshrc文件内添加以下内容
     source /Users/Jacy/.zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
     plugins=(zsh-syntax-highlighting)
+8. ls 在agnoster主题下不高亮：
+   	git clone https://github.com/seebi/dircolors-solarized
+	mv dircolors.256dark .dir_colors
+	brew install coreutils
+	vim .zshrc 将下面的内容拷贝进去
+	if brew list | grep coreutils > /dev/null ; then
+	  PATH="$(brew --prefix coreutils)/libexec/gnubin:$PATH"
+	  alias ls='ls -F --show-control-chars --color=auto'
+	  eval `gdircolors -b $HOME/.dir_colors`
+	fi
     
 
