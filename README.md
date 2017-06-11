@@ -11,7 +11,7 @@ Mac iTerm2 Config Step
 
 3. 安装字体库fonts-master：
 
-       执行`./install.sh`指令安装所有Powerline字体
+    执行`./install.sh`指令安装所有Powerline字体
 
 4. 设置iTerm 2的Regular Font 和 Non-ASCII Font:
 
